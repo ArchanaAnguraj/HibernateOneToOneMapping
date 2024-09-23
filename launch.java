@@ -7,16 +7,22 @@ public class launch {
 	CustomerDetails cd = new CustomerDetails(1,"anu@gmail.com",1234);
 	Customer c=new Customer(1,"anu");
 	//unidirectional
-    hm.add(c);                    //this is for adding
+        hm.add(c);                    //this is for adding
 	hm.add(cd);
-   //bidirectional---///
+	    
+       //bidirectional---///
 	c.setCcid(cd);
 	cd.setCustomer(c);
 	hm.add(cd);
+
+
+	    
 	//select for bidirectional
 	cd=hm.getCDbasedonId(2);
 	System.out.println(cd.getCustomer().getName()+" "+cd.getCustomer().getCid()+" "+cd.getEmail()+" "+cd.getMobile());
 	//for select OneToOne
+
+	    
 	Customer c1=hm.getbasedId(1);
 	if(c1!=null) {
 	System.out.println(c1.getCid()+" "+c1.getName());   //this for get value from customer table
@@ -25,10 +31,13 @@ public class launch {
 	else {
 		System.out.println("no records found");
 	}
+	    
 	//for update OneToOne
 	hm.update(1, "anu", "anu@gmail.com");
+	    
 	//for delete
 	hm.delete(2);
+	    
 	//fetch all
 	hm.getAll();
 	}	
