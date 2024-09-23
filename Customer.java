@@ -23,23 +23,40 @@ public class Customer {
 	public Customer(int cid, String name) {
 		super();
 		this.cid = cid;
-		this.name = name;}
-    public Customer() {
-		super();}
-	public int getCid() {
-		return cid;}
-	public void setCid(int cid) {
-		this.cid = cid;}
-    public String getName() {
-		return name;}
-	public void setName(String name) {
-		this.name = name;}
-	public CustomerDetails getCcid() {
-		return ccid;}
-	public void setCcid(CustomerDetails ccid) {
-		this.ccid = ccid;}
+		this.name = name;
+	
+	}
+      public Customer() 
+	{
+		super();
+	}
+	public int getCid() 
+	{
+		return cid;
+	}
+	public void setCid(int cid) 
+	{
+		this.cid = cid;
+	}
+       public String getName() 
+	{
+		return name;
+	}
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+	public CustomerDetails getCcid() 
+	{
+		return ccid;
+	}
+	public void setCcid(CustomerDetails ccid) 
+	{
+		this.ccid = ccid;
+	}
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		return "Customer [cid=" + cid + ", name=" + name + ", ccid=" + ccid + "]";
 	}
 	
